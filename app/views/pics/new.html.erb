@@ -1,0 +1,18 @@
+<div class = "smurfy">
+
+	<h1 class = "custom-h1">
+		Where do you want to go today?
+
+	</h1>
+
+	<%= simple_form_for @pic do |f| %>
+		<%= f.input :location %>
+		<%= f.input :days %>
+		<%= f.input :notes %>
+
+		<%= f.submit "Save" %>
+
+	<% end %>
+
+
+</div>
