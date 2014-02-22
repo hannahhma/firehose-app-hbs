@@ -1,0 +1,24 @@
+<% @pics.each do |pic| %>
+
+
+<div class ="smurfy span6 text-center">
+	<h1 class = "custom-h1">
+
+	Location: <%= pic.location %>
+	
+	</h1>
+	
+	<br/>
+
+	<h2>
+	Days: <%= pic.days %>
+
+	</h2>
+
+	<br/>
+
+	Notes: <%= pic.notes %>
+
+</div>
+
+<% end %>
