@@ -1,16 +1,19 @@
-<div class = "smurfy">
+<br/>
 
-	<h1 class = "custom-h1">
-		Where do you want to go today?
+<h1 class = "custom-h1">
+	Where do you want to go today?
+</h1>
 
-	</h1>
+<br/>
+<br/>
 
+<div class = "smurfy span6 offset3 text-center">
 	<%= simple_form_for @pic do |f| %>
-		<%= f.input :location %>
-		<%= f.input :days %>
-		<%= f.input :notes %>
+		<%= f.input :location, label: "Where are you heading?" %>
+		<%= f.input :days, label: "How many days are you traveling?"  %>
+		<%= f.input :notes, label: "Anything else we should know?" %>
 
-		<%= f.submit "Save" %>
+		<%= f.submit "Send me an itinerary!", :class => "btn btn-warning btn-large" %>
 
 	<% end %>
 
