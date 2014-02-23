@@ -22,7 +22,7 @@ private
 
 def pic_params
 
-	params.require(:pic).permit(:location, :days, :notes)
+	params.require(:pic).permit(:location, :days, :notes, :image)
 
 end
 

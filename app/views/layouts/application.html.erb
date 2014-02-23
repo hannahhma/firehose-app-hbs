@@ -20,21 +20,26 @@
     </a>
      
     <!-- Be sure to leave the brand out there if you want it shown -->
-    <a class="brand" href="#">Home</a>
-     
+  
+      
     <!-- Everything you want hidden at 940px or less, place within here -->
     <div class="nav-collapse collapse">
     <!-- .nav, .navbar-search, .navbar-form, etc -->
 
     	<ul class ="nav">
-    		<li> 
-				<%=  link_to 'Jaunts', '#' %>    
+    		
+             <li>
+                 <%= link_to 'Home', root_path, :class => 'brand'  %>
+            </li>
+     
+            <li> 
+				<%=  link_to 'Jaunts', pics_path %>    
 			</li>
 			<li>		
 				<%=  link_to 'Concierges', '#' %> 
     		</li>	
 			<li>		
-				<%=  link_to 'Contact us', '#' %> 
+				<%=  link_to 'Contact us', new_pic_path %> 
     		</li>	
 
     		

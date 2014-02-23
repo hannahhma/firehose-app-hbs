@@ -1,27 +1,31 @@
-<% @pics.each do |pic| %>
+<% @pics.each_slice(2) do |slice| %>
+	<div class = "row">
+		<% slice.each do |pic| %>
 
-
-<div class ="smurfy span6 text-center">
-	<h1 class = "custom-h1">
-
-	Location: <%= pic.location %>
+		<div class ="smurfy span6 text-center">
+			<h1 class = "custom-h1">
+				Location: <%= pic.location %>
+			</h1>
 	
-	</h1>
-	
-	<br/>
+			<% if pic.image.present? %>
+				<%= image_tag pic.image %>
+			<% end%>
 
-	<h2>
-	Days: <%= pic.days %>
+			<br/>
 
-	</h2>
+			<h2>
+				Days: <%= pic.days %>
+			</h2>
 
-	<br/>
+			<br/>
 
-	Notes: <%= pic.notes %>
+			Notes: <%= pic.notes %>
 
-	<br/>
-	<br/>
+			<br/>
+			<br/>
 
-</div>
+		</div>
 
+		<% end %>
+	</div>
 <% end %>
